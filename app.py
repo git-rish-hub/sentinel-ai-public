@@ -487,12 +487,12 @@ Strict rules:
 
     except Exception as e:
 
-        return (
-            "Threat Type: Cloud AI analyst unavailable\n"
-            "Indicators: Oracle API unavailable\n"
-            "Likely Objective: Not available\n"
-            "Recommended Analyst Response: Follow Sentinel response decision"
-        )
+    return (
+        f"Threat Type: Cloud AI error\n"
+        f"Indicators: {str(e)[:300]}\n"
+        f"Likely Objective: Debugging required\n"
+        f"Recommended Analyst Response: Check Oracle API configuration"
+    )
 
 # ============================================================
 # PARSE LLAMA OUTPUT
