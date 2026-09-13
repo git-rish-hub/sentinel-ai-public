@@ -443,13 +443,13 @@ Strict rules:
 
         return generated
 
-    except Exception as e:
-    return (
-        "Threat Type: ORACLE DEBUG\n"
-        f"Indicators: {type(e).__name__}: {str(e)[:500]}\n"
-        "Likely Objective: Debugging cloud connection\n"
-        "Recommended Analyst Response: Check Groq configuration"
-    )
+        except Exception as e:
+        return (
+            "Threat Type: ORACLE DEBUG\n"
+            f"Indicators: {type(e).__name__}: {str(e)[:500]}\n"
+            "Likely Objective: Debugging cloud connection\n"
+            "Recommended Analyst Response: Check Groq configuration"
+        )
 
 
 # ============================================================
