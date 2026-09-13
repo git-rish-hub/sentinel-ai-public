@@ -444,13 +444,13 @@ Strict rules:
 
         return generated
 
-   except Exception:
-     return (
+    except Exception:
+       return (
         "Threat Type: Cloud AI analyst unavailable\n"
         "Indicators: Oracle cloud service could not be reached\n"
         "Likely Objective: Not available\n"
         "Recommended Analyst Response: Follow Sentinel response decision"
-     )
+        )
 
 
 # ============================================================
