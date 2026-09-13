@@ -1791,9 +1791,16 @@ n8n incident automation
                 }
 
 
-                automation = trigger_n8n(
-                    payload
-                )
+                if st.session_state.get("last_strike_incident") != scan_id:
+                    automation = trigger_n8n(payload)
+
+                    if automation.get("status") == "EXECUTED":
+                        st.session_state["last_strike_incident"] = scan_id
+                else:
+                    automation = {
+                        "status": "SKIPPED",
+                        "message": "Duplicate STRIKE prevented"
+                    }
 
 
             # ------------------------------------------------
