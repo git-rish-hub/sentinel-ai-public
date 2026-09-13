@@ -432,7 +432,8 @@ Strict rules:
                 }
             ],
             temperature=0.1,
-            max_completion_tokens=220
+            max_completion_tokens=1000,
+            reasoning_effort="low"
         )
 
         generated = response.choices[0].message.content or ""
