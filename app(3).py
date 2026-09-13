@@ -443,7 +443,7 @@ Strict rules:
 
         return generated
 
-        except Exception as e:
+    except Exception as e:
         return (
             "Threat Type: ORACLE DEBUG\n"
             f"Indicators: {type(e).__name__}: {str(e)[:500]}\n"
