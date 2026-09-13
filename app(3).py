@@ -443,13 +443,13 @@ Strict rules:
 
         return generated
 
-    except Exception:
-        return (
-            "Threat Type: Cloud AI analyst unavailable\n"
-            "Indicators: Oracle cloud service could not be reached\n"
-            "Likely Objective: Not available\n"
-            "Recommended Analyst Response: Follow Sentinel response decision"
-        )
+    except Exception as e:
+    return (
+        "Threat Type: ORACLE DEBUG\n"
+        f"Indicators: {type(e).__name__}: {str(e)[:500]}\n"
+        "Likely Objective: Debugging cloud connection\n"
+        "Recommended Analyst Response: Check Groq configuration"
+    )
 
 
 # ============================================================
