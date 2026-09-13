@@ -485,14 +485,14 @@ Strict rules:
 
         return generated
 
-    except Exception as e:
+        except Exception as e:
 
-    return (
-        f"Threat Type: Cloud AI error\n"
-        f"Indicators: {str(e)[:300]}\n"
-        f"Likely Objective: Debugging required\n"
-        f"Recommended Analyst Response: Check Oracle API configuration"
-    )
+        return (
+            f"Threat Type: Cloud AI error\n"
+            f"Indicators: {str(e)[:300]}\n"
+            f"Likely Objective: Debugging required\n"
+            f"Recommended Analyst Response: Check Oracle API configuration"
+        )
 
 # ============================================================
 # PARSE LLAMA OUTPUT
