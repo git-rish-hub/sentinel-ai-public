@@ -30,7 +30,7 @@ from datetime import datetime
 # ============================================================
 # PAGE CONFIG
 # ============================================================
-`
+
 st.set_page_config(
     page_title="SENTINEL//AI",
     page_icon="🛡️",
