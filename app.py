@@ -469,7 +469,7 @@ Strict rules:
             max_completion_tokens=220
         )
 
-        generated = (
+               generated = (
             response
             .choices[0]
             .message
@@ -485,7 +485,7 @@ Strict rules:
 
         return generated
 
-        except Exception as e:
+    except Exception as e:
 
         return (
             f"Threat Type: Cloud AI error\n"
@@ -493,6 +493,7 @@ Strict rules:
             f"Likely Objective: Debugging required\n"
             f"Recommended Analyst Response: Check Oracle API configuration"
         )
+
 
 # ============================================================
 # PARSE LLAMA OUTPUT
